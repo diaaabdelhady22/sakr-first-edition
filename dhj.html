@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta charset="UTF-8">
+  <title>Scrolling Photo Gallery</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background: #f5f5f5;
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    .scroll-container {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      gap: 10px;
+      padding: 10px;
+      border: 2px solid #ccc;
+      background-color: #fff;
+    }
+
+    .scroll-container img {
+      scroll-snap-align: start;
+      flex-shrink: 0;
+      width: 100%;
+      max-width: 600px;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Swipe or Scroll to View More Photos</h2>
+
+  <div class="scroll-container">
+    <img src="https://via.placeholder.com/600x400?text=Photo+1" alt="Photo 1">
+    <img src="https://via.placeholder.com/600x400?text=Photo+2" alt="Photo 2">
+    <img src="https://via.placeholder.com/600x400?text=Photo+3" alt="Photo 3">
+    <img src="https://via.placeholder.com/600x400?text=Photo+4" alt="Photo 4">
+  </div>
+
+</body>
+</html>

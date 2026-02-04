@@ -1,0 +1,57 @@
+<html>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Smooch+Sans:wght@100..900&display=swap" rel="stylesheet">
+    <body style="background-color: gold;">
+        <link rel="stylesheet" href="style2.css">
+        <div class="box1">
+        <center> amr sakr</center><br>
+    
+        </div><br><br><br><br><br><br><center> <img src="logo.jpg" ></center>
+       <center><div id="nameDisplay">...</div>
+        <div class="box">
+          <h1>what is your grade</h1><hr>
+          <br><br><br>
+<select id="nav" onchange="location = this.value;">
+  <option value="">...choose your grade...</option>
+  <option value="videos1.html">prep 1</option>
+  <option value="videos2.html">prep 2</option>
+  <option value="videos3.html">prep 3</option>
+</select>
+
+        </div><br><br><br><br><br>
+
+  <div class="scroll-container">
+    <img src="amr.jpg" alt="Photo 1">
+    <img src="logo.jpg" alt="Photo 2">
+    <img src="alex.jpg" alt="Photo 3">
+   
+  </div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const code = params.get('code');
+/*======================================== codes ===============================================*/
+    const names = {
+      "nQgy169752": "hey , Adam Ahmed",
+      "hMaz760813": "hey , mohamed abdelsalam",
+      "lCWR178645": "hey , ahmed hasan",
+      "TQYP389214": "hey , diaa abdelhady",
+      "MWTZ513047": "hey , amr sakr",
+      "OooW156738": "hey , omar metwaly",
+      "BRng412308": "hey , ahmed said",
+      "WeZd184390": "hey , adam yehia"
+    };
+/*==============================================================================================*/
+    const display = document.getElementById('nameDisplay');
+    if(names[code]) {
+      display.textContent = names[code];
+    } else {
+      window.location.href="index.html"
+      
+       alert("code is not right")
+    }
+
+  </script>
+    </center>
+  </body>
